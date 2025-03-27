@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <i class="fa-brands fa-slack icon"></i>
+    <div class="head">        
+        <h1>CAREER CHATBOT</h1>
+    </div>
+    <div id="chatbox">
+        <div id="chat-messages"></div>
+        <i class="fa-solid fa-microphone voice-icon" onclick="startSpeechRecognition()"></i>
+        <input type="text" id="user-input" placeholder="Ask anything related to career" />
+        <button onclick="sendMessage()">Send</button>
+        <div class="tooltip">
+            <i class="fa-solid fa-trash clear-icon" onclick="clearChat()"></i>
+            <span class="tooltip-text">Clear Chat</span>
+        </div>       
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
